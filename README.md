@@ -21,8 +21,9 @@ Development environment for python
 
 - If you already have a python code, then go to your python project directory and pull this repository
     ```
-    git pull https://github.com/sakiv/devcontainer-python.git
+    git pull --ff --allow-unrelated-histories https://github.com/sakiv/devcontainer-python.git
     ```
+    *Note: you may require to fix the conflicts during merge.*
 
 - Add necessary environment variables in local.env
     ```

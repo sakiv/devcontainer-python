@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: devcontainer-python:latest
+    image: sakiv77/devcontainer-python:latest
     ports:
       - 9922:22
     volumes:
@@ -14,4 +14,4 @@ services:
         target: /workspace
     environment:
       DEV: true
-    env_file: local.env    
+    env_file: local.env

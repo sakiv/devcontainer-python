@@ -57,6 +57,13 @@ Development environment for python
     docker run -dit --env-file local.env --mount type=bind,source="$(pwd)",target=/workspace --name="$(basename $PWD)" devcontainer-python:latest
     ```
 
+- Build multi platform image and publish
+    ```
+    docker buildx create --use
+
+    docker buildx build --platform linux/amd64,linux/arm64 -t sakiv77/devcontainer-python:latest --push .
+    ```
+
 *Note: I recommend using VS Code Docker extension to manage docker images and containers. But if you are using another IDE and need to use Docker CLI then refer to (Docker CLI documentation)[https://docs.docker.com/engine/reference/commandline/cli/]*
 
 ## VS Code Instructions
